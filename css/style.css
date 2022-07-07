@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+	--clr-primary: #2a2a72;
+	--clr-secondary: #4c2885;
+	--clr-text: white;
+	--var-box-radius: 1em;
+	--var-btn-radius: 0.5em;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	max-height: fit-content;
+	margin: 0;
+	background-color: var(--clr-primary);
+	color: var(--clr-text);
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 90%;
+	max-width: 38rem;
+	height: 100vh;
+	margin-inline: auto;
+	gap: 2rem;
+}
+
+.user-form {
+	width: 100%;
+}
+
+.user-form input {
+	display: block;
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	border-radius: var(--var-box-radius);
+	background-color: var(--clr-secondary);
+	/* box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1); */
+	color: var(--clr-text);
+	font-size: 1rem;
+	font-family: inherit;
+}
+
+.user-form input::placeholder {
+	color: #bbb;
+}
+
+/* .user-form input:focus {
+	outline: none;
+} */
+
+.card {
+	display: flex;
+	width: 100%;
+	padding: 3rem;
+	gap: 3rem;
+	border-radius: var(--var-box-radius);
+	background-color: var(--clr-secondary);
+	/* box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1); */
+}
+
+.avatar {
+	width: 150px;
+	height: 150px;
+	border: 10px solid var(--clr-primary);
+	border-radius: 50%;
+}
+
+.user-info {
+	color: #eee;
+}
+
+.user-info h2 {
+	margin-top: 0;
+}
+
+.user-info ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	list-style-type: none;
+}
+
+.user-info ul li {
+	display: flex;
+	align-items: center;
+}
+
+.user-info ul li strong {
+	margin-left: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.repo {
+	display: inline-block;
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: var(--var-btn-radius);
+	background-color: var(--clr-primary);
+	color: var(--clr-text);
+	font-size: 0.7rem;
+	text-decoration: none;
+}
+
+@media (max-width: 500px) {
+	.card {
+		flex-direction: column;
+		align-items: center;
+		padding: 2rem;
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		margin-block: 1rem;
+		gap: 1rem;
+	}
+	.card {
+		padding: 2rem;
+		gap: unset;
+	}
+
+	.user-info ul {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 321px) {
+	.container {
+		justify-content: start;
+		margin-block: 1rem;
+	}
+}
